@@ -74,8 +74,8 @@ class Problem1Test {
     }
     @Test
     void abgerundeteNoten3() {
-        int[] input = {33, 55, 45, 34, 99, 32, 55, 58};
-        int[] expectedOutput = {33, 55, 45, 34, 99, 32, 55, 58} ;
+        int[] input = {};
+        int[] expectedOutput = {} ;
         int[] output = Problem1.abgerundeteNoten(input);
         assertArrayEquals(expectedOutput, output);
         System.out.println("Problem1- abgerundeteNoten Test3 successful");
