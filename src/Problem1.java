@@ -32,10 +32,10 @@ public class Problem1{
         int[] roundedGrades = new int[grades.length];
         for(int i = 0; i < grades.length; i++){
             if(grades[i] > 38){
-                if(grades[i] + 1 % 5 == 0){
+                if((grades[i] + 1) % 5 == 0){
                     roundedGrades[i] = grades[i] + 1;
                 }
-                else if(grades[i] + 2 % 5 == 0){
+                else if((grades[i] + 2) % 5 == 0){
                     roundedGrades[i] = grades[i] + 2;
                 }
                 else{
