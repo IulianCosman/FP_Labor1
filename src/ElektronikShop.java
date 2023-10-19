@@ -1,6 +1,15 @@
 public class ElektronikShop {
     int[] usbDrives;
     int[] keyboards;
+
+    public int[] getUsbDrives() {
+        return usbDrives;
+    }
+
+    public void setUsbDrives(int[] usbDrives) {
+        this.usbDrives = usbDrives;
+    }
+
     ElektronikShop(int[] usbDrives, int[] keyboards){
         this.keyboards = keyboards;
         this.usbDrives = usbDrives;

@@ -1,7 +1,16 @@
-public class JavaUniversität{
+public class Problem1{
+
     public static int[] nichtAusreichendeNoten(int[] grades) {
         int cnt = 0;
-        int[] inadequateGrades = new int[100];
+        for(int grade : grades){
+            if(grade < 40){
+                cnt++;
+            }
+        }
+
+        int[] inadequateGrades = new int[cnt];
+
+        cnt = 0;
         for (int grade : grades) {
             if (grade < 40) {
                 inadequateGrades[cnt] = grade;
@@ -11,8 +20,8 @@ public class JavaUniversität{
         return inadequateGrades;
     }
 
-    public static float durchschnittswert(int[] grades){
-        float sum = 0;
+    public static double durchschnittswert(int[] grades){
+        double sum = 0;
         for(int grade : grades){
             sum += grade;
         }
@@ -20,7 +29,7 @@ public class JavaUniversität{
     }
 
     public static int[] abgerundeteNoten(int[] grades){
-        int[] roundedGrades = new int[100];
+        int[] roundedGrades = new int[grades.length];
         for(int i = 0; i < grades.length; i++){
             if(grades[i] > 38){
                 if(grades[i] + 1 % 5 == 0){
@@ -41,7 +50,7 @@ public class JavaUniversität{
     }
 
     public static int maximaleAbgerundeteNote(int[] grades){
-        int[] roundedGrades = new int[100];
+        int[] roundedGrades = new int[grades.length];
         int maximalGrade = Integer.MIN_VALUE;
         roundedGrades = abgerundeteNoten(grades);
         for(int grade : grades){
