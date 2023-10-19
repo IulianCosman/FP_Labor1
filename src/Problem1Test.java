@@ -80,7 +80,4 @@ class Problem1Test {
         assertArrayEquals(expectedOutput, output);
         System.out.println("Problem1- abgerundeteNoten Test3 successful");
     }
-    @Test
-    void maximaleAbgerundeteNote() {
-    }
 }
