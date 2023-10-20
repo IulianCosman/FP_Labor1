@@ -3,7 +3,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class Problem2Test {
-
     @Test
     void maximaleZahl1() {
         int[] input = {3, 32, 423, 44, 66, 34, 55, 30};
@@ -30,14 +29,55 @@ class Problem2Test {
     }
 
     @Test
-    void minimaleZahl() {
+    void minimaleZahl1() {
+        int[] input = {3, 32, 423, 44, 66, 34, 55, 30};
+        int expectedOutput = 3;
+        int output = Problem2.minimaleZahl(input);
+        assertEquals(expectedOutput, output);
+        System.out.println("Problem2- minimaleZahl Test1 successful");
     }
-
     @Test
-    void maximaleSumme() {
+    void minimaleZahl2() {
+        int[] input = {3, 32, 423, 44, 66, 34, 55, 30};
+        int falseOutput = 30;
+        int output = Problem2.minimaleZahl(input);
+        assertNotEquals(falseOutput, output);
+        System.out.println("Problem2- minimaleZahl Test2 successful");
     }
-
+    @Test
+    void minimaleZahl3() {
+        int[] input = {};
+        int expectedOutput = Integer.MAX_VALUE;
+        int output = Problem2.minimaleZahl(input);
+        assertEquals(expectedOutput, output);
+        System.out.println("Problem2- minimaleZahl Test3 successful");
+    }
+    @Test
+    void maximaleSumme1() {
+        int[] input = {3, 32, 423, 44, 66, 34, 55, 30};
+        int expectedOutput = 684;
+        int output = Problem2.maximaleSumme(input);
+        assertEquals(expectedOutput, output);
+        System.out.println("Problem2- maximaleSumme Test1 successful");
+    }
+    @Test
+    void maximaleSumme2() {
+        int[] input = {3, 32, 423, 44, 66, 34, 55, 30};
+        int falseOutput = 60;
+        int output = Problem2.maximaleSumme(input);
+        assertNotEquals(falseOutput, output);
+        System.out.println("Problem2- maximaleSumme Test2 successful");
+    }
+    @Test
+    void maximaleSumme3() {
+        int[] input = {};
+        int expectedOutput = Integer.MIN_VALUE;
+        int output = Problem2.maximaleSumme(input);
+        assertNotEquals(expectedOutput, output);
+        System.out.println("Problem2- maximaleSumme Test3 successful");
+    }
     @Test
     void minimaleSumme() {
+
     }
 }
