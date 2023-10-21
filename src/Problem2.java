@@ -21,6 +21,9 @@ public class Problem2 {
     }
 
     public static int maximaleSumme(int[] array){
+        if(array.length == 0){
+            return Integer.MIN_VALUE;
+        }
         int sum = 0;
         for(int element : array){
             sum += element;
@@ -29,6 +32,9 @@ public class Problem2 {
     }
 
     public static int minimaleSumme(int[] array){
+        if(array.length == 0){
+            return Integer.MIN_VALUE;
+        }
         int sum = 0;
         for(int element : array){
             sum += element;

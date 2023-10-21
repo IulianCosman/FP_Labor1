@@ -73,11 +73,35 @@ class Problem2Test {
         int[] input = {};
         int expectedOutput = Integer.MIN_VALUE;
         int output = Problem2.maximaleSumme(input);
-        assertNotEquals(expectedOutput, output);
+        assertEquals(expectedOutput, output);
         System.out.println("Problem2- maximaleSumme Test3 successful");
     }
     @Test
-    void minimaleSumme() {
+    void minimaleSumme1() {
+        int[] input = {3, 32, 423, 44, 66, 34, 55, 30};
+        int expectedOutput = 264;
+        int output = Problem2.minimaleSumme(input);
+        assertEquals(expectedOutput, output);
+        System.out.println("Problem2- minimaleSumme Test1 successful");
 
     }
+    @Test
+    void minimaleSumme2() {
+        int[] input = {3, 32, 423, 44, 66, 34, 55, 30};
+        int falseOutput = 265;
+        int output = Problem2.minimaleSumme(input);
+        assertNotEquals(falseOutput, output);
+        System.out.println("Problem2- minimaleSumme Test2 successful");
+
+    }
+    @Test
+    void minimaleSumme3() {
+        int[] input = {};
+        int expectedOutput = Integer.MIN_VALUE;
+        int output = Problem2.minimaleSumme(input);
+        assertEquals(expectedOutput, output);
+        System.out.println("Problem2- minimaleSumme Test3 successful");
+
+    }
+
 }

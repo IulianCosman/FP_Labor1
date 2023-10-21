@@ -1,20 +1,21 @@
-public class ElektronikShop {
+public class Problem4 {
     int[] usbDrives;
     int[] keyboards;
 
     public int[] getUsbDrives() {
         return usbDrives;
     }
-
     public void setUsbDrives(int[] usbDrives) {
         this.usbDrives = usbDrives;
     }
+    public int[] getKeyboards() {return keyboards;}
+    public void setKeyboards(int[] keyboards) { this.keyboards = keyboards;}
 
-    ElektronikShop(int[] usbDrives, int[] keyboards){
+    Problem4(int[] usbDrives, int[] keyboards){
         this.keyboards = keyboards;
         this.usbDrives = usbDrives;
     }
-    public static int billigstekeyboard(ElektronikShop shop){
+    public static int billigsteTastatur(Problem4 shop){
         int minimalKeyboard = Integer.MAX_VALUE;
         for(int keyboard : shop.keyboards){
             if(keyboard < minimalKeyboard) {
@@ -24,7 +25,7 @@ public class ElektronikShop {
         return minimalKeyboard;
     }
 
-    public static int teuersteGegenstand(ElektronikShop shop){
+    public static int teuersteGegenstand(Problem4 shop){
         int mostExpensiveObject = Integer.MIN_VALUE;
         for(int keyboard : shop.keyboards){
             if(keyboard > mostExpensiveObject){
@@ -39,7 +40,7 @@ public class ElektronikShop {
         return mostExpensiveObject;
     }
 
-    public static int teuersteUsbLaufwerk(ElektronikShop shop, int budget){
+    public static int teuersteUsbLaufwerk(Problem4 shop, int budget){
         int mostExpensiveUsbDrive = Integer.MIN_VALUE;
         for(int usbDrive : shop.usbDrives){
             if(usbDrive > mostExpensiveUsbDrive && usbDrive <= budget){
@@ -49,7 +50,7 @@ public class ElektronikShop {
         return mostExpensiveUsbDrive;
     }
 
-    public static int geldbetrag(ElektronikShop shop, int budget){
+    public static int geldbetrag(Problem4 shop, int budget){
         int neededKeyboard, neededUsbDrive, moneyAmount = -1;
         for(int keyboard : shop.keyboards){
             for(int usbDrive : shop.usbDrives){

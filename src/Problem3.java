@@ -2,26 +2,18 @@ public class Problem3 {
 
     public static int[] summe(int[] number1, int[] number2){
         int[] sum = new int[number1.length];
-        boolean carriedOver = false;
+        int carriedOver = 0;
         for(int i = number1.length - 1; i >= 0; i--){
-            sum[i] = number1[i] + number2[i];
-            if(carriedOver){
-                sum[i]++;
-            }
-            if(sum[i] > 9){
-                sum[i] -= 10;
-                carriedOver = true;
-            }
-            else{
-                carriedOver = false;
-            }
+            sum[i] = number1[i] + number2[i] + carriedOver;
+            carriedOver = sum[i] / 10;
+            sum[i] = sum[i] % 10;
         }
-        if(carriedOver){
+        if(carriedOver > 0){
             int[] newSum = new int[number1.length + 1];
             for(int i = 1; i <= number1.length; i++){
                 newSum[i] = sum[i-1];
             }
-            newSum[0]=1;
+            newSum[0] = carriedOver;
             return newSum;
         }
         return sum;
